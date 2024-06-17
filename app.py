@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request
 import pickle
-from pyngrok import ngrok
+# from pyngrok import ngrok
 
-port_no = 5000
+# port_no = 5000
 
-ngrok.set_auth_to
-ken('2hzX8d175EY9A0NKj351rTHbcPq_84ZtGq8dJjGdmzPCHpnEF')
-public_url = ngrok.connect(port_no).public_url
+# ngrok.set_auth_to
+# ken('2hzX8d175EY9A0NKj351rTHbcPq_84ZtGq8dJjGdmzPCHpnEF')
+# public_url = ngrok.connect(port_no).public_url
 
 app = Flask(__name__)
 
@@ -38,7 +38,7 @@ def predict():
     return render_template('result.html', prediction=prediction)
 
 if __name__ == '__main__':
-    print(public_url)
+    # print(public_url)
     app.run()
 
 
